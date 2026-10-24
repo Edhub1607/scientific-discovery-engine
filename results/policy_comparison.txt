@@ -1,0 +1,5 @@
+0 experiments | random: unresolved 2.78 ± 0.17, wrong 0.93 ± 0.15 | informed: unresolved 2.78 ± 0.17, wrong 0.93 ± 0.15
+1 experiments | random: unresolved 2.10 ± 0.15, wrong 0.93 ± 0.15 | informed: unresolved 1.03 ± 0.10, wrong 0.93 ± 0.15
+2 experiments | random: unresolved 1.47 ± 0.12, wrong 0.94 ± 0.15 | informed: unresolved 0.21 ± 0.05, wrong 0.93 ± 0.15
+3 experiments | random: unresolved 0.99 ± 0.10, wrong 0.94 ± 0.15 | informed: unresolved 0.01 ± 0.01, wrong 0.94 ± 0.15
+4 experiments | random: unresolved 0.56 ± 0.08, wrong 0.94 ± 0.15 | informed: unresolved 0.00 ± 0.00, wrong 0.94 ± 0.15

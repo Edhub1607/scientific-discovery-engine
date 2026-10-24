@@ -47,11 +47,17 @@ for seed in range(N_SYSTEMS):
     if (seed + 1) % 20 == 0:
         print(f"finished {seed + 1}/{N_SYSTEMS} systems")
 
-print("\nAverages over", N_SYSTEMS, "random systems")
-print("experiments done | unresolved links left, and wrong arrows, per policy")
+print("\nAverages over", N_SYSTEMS, "random systems (± standard error)")
+lines = []
 for k in range(BUDGET + 1):
-    row = f"{k}  "
+    row = f"{k} experiments"
     for name in policies:
-        arr = np.array(results[name])[:, k, :].mean(axis=0)
-        row += f"| {name}: unresolved {arr[0]:.2f}, wrong {arr[1]:.2f}  "
+        data = np.array(results[name])[:, k, :]
+        mean = data.mean(axis=0)
+        sem = data.std(axis=0, ddof=1) / np.sqrt(N_SYSTEMS)
+        row += f" | {name}: unresolved {mean[0]:.2f} ± {sem[0]:.2f}, wrong {mean[1]:.2f} ± {sem[1]:.2f}"
+    lines.append(row)
     print(row)
+
+with open("results/policy_comparison.txt", "w") as f:
+    f.write("\n".join(lines) + "\n")
