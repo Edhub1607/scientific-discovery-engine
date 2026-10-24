@@ -10,6 +10,8 @@ def pc_edges(g):
                 directed.add((j, i))
             elif g[i, j] == -1 and g[j, i] == -1:
                 undirected.add((i, j))
+            elif g[i, j] == 1 and g[j, i] == 1:
+                undirected.add((i, j))  # conflicting orientation: treat as unresolved
     return directed, undirected
 
 
