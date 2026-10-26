@@ -69,4 +69,5 @@ python experiments/compare_policies.py
 
 ## How this was built
 
+
  I built this project with Claude (Anthropic’s AI assistant), which drafted code and explained concepts while I was learning causal discovery from scratch. I set up the environment, created and ran every file, fixed errors (a missing import, a virtual-environment problem, indentation bugs), and checked the results against the true graphs. I can explain how the simulator, the PC baseline, the intervention rule and the two policies work; I am still learning the statistics behind PC and why it leaves some edge directions undecided.
